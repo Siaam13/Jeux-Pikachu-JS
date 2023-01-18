@@ -1,0 +1,151 @@
+/* Fait par Sebastien Lapeyre  @siaam13 */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+     display: flex;
+     background-color: rgb(253, 255, 145);
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     flex-direction: column;
+}
+.Titre {
+    display: flex;
+    font-size: 70px;
+    color: black;
+    border-color: 3px yellow;
+    margin-bottom: 10px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 50px rgba (0,0,0,0.1);
+
+}
+
+.jeu {
+    width: 500px;
+    height: 200px;
+    border:1px solid black;
+    overflow: hidden;
+    border: 0;
+    border-bottom: 1px solid yellow;
+}
+
+.perso {
+    width: 70px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 150px;
+}
+
+.score {
+    display: flex;
+    font-size: 20px;
+}
+
+#compteur {
+    margin-left: 10px;
+}
+
+.titre-record {
+    display: flex;
+    font-size: 20px;
+}
+
+#record {
+    margin-left: 10px;
+}
+ 
+@keyframes perso-saut {
+    0% {
+        top: 130px;
+    }
+    25% {
+        top: 80px;
+    }
+    50% {
+        top: 80px;  
+    }
+    100% {
+        top: 130px;
+    }
+}
+
+.animation {
+    animation: perso-saut 500ms infinite;
+}
+
+.perso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.obstacles {
+   width: 20px; 
+   height: 20px;
+   background-color: black;
+   position: relative;
+   top: 130px;
+   left: 480px;
+   border-radius: 50%;
+   animation: anime-obstacles 2.5s infinite;
+}
+
+@keyframes anime-obstacles {
+    0% {
+        left: 480px;
+    }
+    100% {
+        left: -40px;
+    }
+
+}
+
+.control {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.control a,button {
+    padding: 10px 50px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    text-decoration: 0;
+    color: black;
+}
+
+
+
+
+.reseau img {
+    width: 70px;
+    margin: 10px 5px; 
+    border-radius: 40%;
+    transition: background 0.5s;  
+   }
+
+.reseau img:hover {
+
+    background:rgba(255, 255, 255, 0.411); 
+    border-radius: 50%;
+
+}
+
+.siam {
+    margin-top: 20px;
+    color: white;
+}
